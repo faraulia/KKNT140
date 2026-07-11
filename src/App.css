@@ -1,38 +1,341 @@
-.App {
+:root {
+  --paper: #F2F6F9;
+  --paper-deep: #DFEAF1;
+  --ink: #152431;
+  --ink-soft: #4E6577;
+  --moss: #1E4A63;
+  --indigo: #2E7EA3;
+  --indigo-deep: #123246;
+  --clay: #5C87A0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.nga-page {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+}
+
+/* ---------- HEADER ---------- */
+.nga-header {
+  padding: 24px 20px;
+  text-align: center;
+  background: var(--moss);
+  color: var(--paper);
+}
+
+.nga-nav {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.nga-nav-link {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--paper);
+  text-decoration: none;
+  opacity: 0.85;
+  transition: opacity 0.2s ease;
+}
+
+.nga-nav-link:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+/* ---------- FOOTER ---------- */
+.nga-footer {
+  padding: 24px 20px;
+  text-align: center;
+  background: var(--moss);
+  color: var(--paper);
+}
+
+.nga-footer-text {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+/* ---------- HERO ---------- */
+.nga-hero {
+  padding: 72px 20px 56px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nga-eyebrow {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  color: var(--indigo);
+  text-transform: uppercase;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nga-title {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: clamp(40px, 9vw, 76px);
+  line-height: 1.05;
+  margin-top: 14px;
+  color: var(--moss);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nga-subtitle {
+  max-width: 480px;
+  margin: 16px auto 0;
+  font-size: 15px;
+  color: var(--ink-soft);
+  line-height: 1.7;
+}
+
+.nga-meta-row {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  margin-top: 32px;
+  flex-wrap: wrap;
+}
+
+.nga-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nga-mono {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 13px;
+}
+
+/* ---------- PROFIL ---------- */
+.nga-profil-section {
+  padding: 48px 20px 72px;
+  background: var(--paper-deep);
+}
+
+.nga-profil-inner {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.nga-section-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  color: var(--indigo);
+  text-transform: uppercase;
+}
+
+.nga-profil-text {
+  margin-top: 14px;
+  font-size: 16px;
+  line-height: 1.85;
+  color: var(--ink);
+}
+
+.nga-batas-label {
+  margin-top: 40px;
+}
+
+/* ---------- COMPASS ---------- */
+.nga-compass {
+  position: relative;
+  width: 100%;
+  max-width: 560px;
+  margin: 48px auto 0;
+  aspect-ratio: 1 / 1;
+}
+
+.nga-compass-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.nga-compass-line {
+  stroke: var(--moss);
+  stroke-width: 0.75;
+  stroke-dasharray: 3 4;
+  opacity: 0.5;
+}
+
+.nga-compass-ring {
+  fill: none;
+  stroke: var(--indigo);
+  stroke-width: 1;
+  opacity: 0.35;
+}
+
+.nga-compass-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 150px;
+  border-radius: 9999px;
+  background: var(--moss);
+  color: var(--paper);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
+  padding: 12px;
 }
 
-.App-link {
-  color: #61dafb;
+.nga-compass-center-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  opacity: 0.75;
+  text-transform: uppercase;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nga-compass-center-name {
+  font-family: 'Fraunces', serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.15;
+  margin-top: 2px;
+}
+
+.nga-compass-box {
+  position: absolute;
+  width: 150px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: var(--paper);
+  border: 1px solid rgba(30, 74, 99, 0.2);
+}
+
+.nga-compass-box--top {
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -55%);
+}
+
+.nga-compass-box--bottom {
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 55%);
+}
+
+.nga-compass-box--left {
+  left: 0;
+  top: 50%;
+  transform: translate(-55%, -50%);
+}
+
+.nga-compass-box--right {
+  right: 0;
+  top: 50%;
+  transform: translate(55%, -50%);
+}
+
+.nga-compass-arah {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  color: var(--indigo);
+  letter-spacing: 0.06em;
+}
+
+.nga-compass-tempat {
+  font-family: 'Inter', sans-serif;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-top: 2px;
+}
+
+.nga-compass-ket {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  color: var(--ink-soft);
+}
+
+/* ---------- POTENSI ---------- */
+.nga-potensi-section {
+  padding: 64px 20px 80px;
+}
+
+.nga-potensi-inner {
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.nga-potensi-title {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: clamp(26px, 4vw, 34px);
+  margin-top: 8px;
+  color: var(--moss);
+}
+
+.nga-potensi-note {
+  font-size: 13px;
+  color: var(--ink-soft);
+  margin-top: 6px;
+}
+
+.nga-potensi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  margin-top: 28px;
+}
+
+.nga-potensi-card {
+  background: var(--paper-deep);
+  border: 1px solid rgba(30, 74, 99, 0.13);
+  border-radius: 14px;
+  padding: 22px;
+}
+
+.nga-potensi-icon-wrap {
+  width: 38px;
+  height: 38px;
+  border-radius: 9px;
+  background: var(--moss);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nga-potensi-card-title {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: 17px;
+  margin-top: 14px;
+  color: var(--ink);
+}
+
+.nga-potensi-card-text {
+  font-size: 13.5px;
+  color: var(--ink-soft);
+  margin-top: 6px;
+  line-height: 1.6;
+}
+
+/* ---------- FOOTER ---------- */
+.nga-footer {
+  padding: 24px 20px;
+  text-align: center;
+  background: var(--moss);
+  color: var(--paper);
+}
+
+.nga-footer-text {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  opacity: 0.8;
 }
