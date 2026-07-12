@@ -51,20 +51,6 @@ html {
   text-decoration: underline;
 }
 
-/* ---------- FOOTER ---------- */
-.nga-footer {
-  padding: 24px 20px;
-  text-align: center;
-  background: var(--moss);
-  color: var(--paper);
-}
-
-.nga-footer-text {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 12px;
-  opacity: 0.8;
-}
-
 /* ---------- HERO ---------- */
 .nga-hero {
   padding: 72px 20px 56px;
@@ -146,6 +132,7 @@ html {
 }
 
 /* ---------- COMPASS ---------- */
+/* Semua ukuran pake clamp()/% biar ngikutin lebar container, gak fixed px lagi */
 .nga-compass {
   position: relative;
   width: 100%;
@@ -180,8 +167,8 @@ html {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 150px;
-  height: 150px;
+  width: clamp(76px, 27%, 150px);
+  height: clamp(76px, 27%, 150px);
   border-radius: 9999px;
   background: var(--moss);
   color: var(--paper);
@@ -190,7 +177,7 @@ html {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 12px;
+  padding: clamp(6px, 2.5%, 12px);
 }
 
 .nga-compass-center-label {
@@ -203,7 +190,7 @@ html {
 
 .nga-compass-center-name {
   font-family: 'Fraunces', serif;
-  font-size: 20px;
+  font-size: clamp(11px, 3.6vw, 20px);
   font-weight: 600;
   line-height: 1.15;
   margin-top: 2px;
@@ -211,8 +198,8 @@ html {
 
 .nga-compass-box {
   position: absolute;
-  width: 150px;
-  padding: 10px 12px;
+  width: clamp(78px, 27%, 150px);
+  padding: clamp(5px, 1.8%, 10px) clamp(6px, 2%, 12px);
   border-radius: 10px;
   background: var(--paper);
   border: 1px solid rgba(30, 74, 99, 0.2);
@@ -221,46 +208,64 @@ html {
 .nga-compass-box--top {
   top: 0;
   left: 50%;
-  transform: translate(-50%, -55%);
+  transform: translate(-50%, -60%);
 }
 
 .nga-compass-box--bottom {
   bottom: 0;
   left: 50%;
-  transform: translate(-50%, 55%);
+  transform: translate(-50%, 60%);
 }
 
 .nga-compass-box--left {
-  left: 0;
+  left: 18%;
   top: 50%;
-  transform: translate(-55%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .nga-compass-box--right {
-  right: 0;
+  left: 82%;
   top: 50%;
-  transform: translate(55%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .nga-compass-arah {
   font-family: 'IBM Plex Mono', monospace;
-  font-size: 10px;
+  font-size: clamp(7px, 2.1vw, 10px);
   color: var(--indigo);
   letter-spacing: 0.06em;
 }
 
 .nga-compass-tempat {
   font-family: 'Inter', sans-serif;
-  font-size: 13.5px;
+  font-size: clamp(9.5px, 2.8vw, 13.5px);
   font-weight: 600;
   color: var(--ink);
   margin-top: 2px;
+  line-height: 1.25;
 }
 
 .nga-compass-ket {
   font-family: 'Inter', sans-serif;
-  font-size: 12px;
+  font-size: clamp(8.5px, 2.4vw, 12px);
   color: var(--ink-soft);
+  line-height: 1.25;
+}
+
+/* Layar sangat sempit: turunin rasio box biar makin lapang dari lingkaran tengah */
+@media (max-width: 420px) {
+  .nga-compass {
+    max-width: 340px;
+  }
+
+  .nga-compass-center {
+    width: 30%;
+    height: 30%;
+  }
+
+  .nga-compass-box {
+    width: 26%;
+  }
 }
 
 /* ---------- POTENSI ---------- */

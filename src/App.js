@@ -56,7 +56,7 @@ function Compass() {
       </svg>
 
       <div className="nga-compass-center">
-        <span className="nga-compass-center-name"> Desa Ngabean</span>
+        <span className="nga-compass-center-name">Desa Ngabean</span>
       </div>
 
       {BATAS.map((b) => (
@@ -85,6 +85,7 @@ export default function App() {
           </nav>
         </div>
       </header>
+
       {/* HERO */}
       <section className="nga-hero">
         <div className="nga-eyebrow">Kec. Boja, Kab. Kendal, Jawa Tengah</div>
