@@ -102,7 +102,7 @@ html {
 /* ---------- HERO ---------- */
 .nga-hero {
   position: relative;
-  min-height: 78vh;
+  min-height: 60vh;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -145,7 +145,6 @@ html {
 }
 
 .nga-eyebrow {
-  font-family: "JetBrains Mono", monospace;
   font-size: 12px;
   letter-spacing: 0.1em;
   color: var(--primary);
@@ -269,7 +268,7 @@ html {
 
 /* ---------- BATAS WILAYAH ---------- */
 .nga-batas-section {
-  padding: 88px 0;
+  padding: 60px 0 100px;
   background: var(--surface-container-lowest);
 }
 
@@ -304,7 +303,6 @@ html {
 }
 
 .nga-batas-arah {
-  font-family: "JetBrains Mono", monospace;
   font-size: 10px;
   color: var(--primary);
   letter-spacing: 0.06em;
@@ -353,7 +351,7 @@ html {
 
 /* ---------- PROFIL ---------- */
 .nga-profil-section {
-  padding: 72px 0;
+  padding: 60px 0;
   background: var(--surface);
 }
 
@@ -370,7 +368,7 @@ html {
 
 /* ---------- POTENSI ---------- */
 .nga-potensi-section {
-  padding: 96px 0;
+  padding: 60px 0 120px;
   background: var(--surface-container-low);
 }
 

@@ -60,20 +60,20 @@ export default function App() {
       <section className="nga-hero">
         <div className="nga-hero-bg">
           <img
-            src="https://i.pinimg.com/originals/79/b7/8b/79b78be49d7eab9868cc2eb74c2aa22d.jpg"
-            alt="Sawah terasering di Boja, Kendal"
+            src="/images/ngabean.png"
+            alt="Desa Ngabean"
           />
           <div className="nga-hero-gradient" />
         </div>
         <div className="nga-hero-content">
-          <span className="nga-eyebrow">KECAMATAN BOJA, KENDAL</span>
+          <span className="nga-eyebrow">KECAMATAN BOJA, KABUPATEN KENDAL</span>
           <h1 className="nga-title">Desa Ngabean</h1>
           <p className="nga-subtitle"></p>
           <div className="nga-hero-actions">
             <a href="#potensi" className="nga-btn nga-btn--primary">
               Potensi Desa <FiCompass size={18} />
             </a>
-            <a href="#profil" className="nga-btn nga-btn--ghost">Pelajari Profil</a>
+            <a href="#profil" className="nga-btn nga-btn--ghost">Profil</a>
           </div>
         </div>
       </section>
@@ -81,7 +81,6 @@ export default function App() {
       {/* PROFIL */}
       <section id="profil" className="nga-profil-section">
         <div className="nga-section-inner nga-profil-inner">
-          <span className="nga-section-label">Profil desa</span>
           <p className="nga-profil-text">
             Desa Ngabean merupakan salah satu desa di Kecamatan Boja, Kabupaten Kendal, dengan
             jarak tempuh ke kecamatan 5,5 km dan ke kabupaten 28 km, yang dapat ditempuh dengan
@@ -94,7 +93,7 @@ export default function App() {
       <section id="batas" className="nga-batas-section">
         <div className="nga-section-inner">
           <div className="nga-center-head">
-            <h3 className="nga-h2">Wilayah Bertetangga</h3>
+            <h3 className="nga-h2">Batas Wilayah</h3>
             <div className="nga-underline" />
           </div>
           <div className="nga-batas-grid">
@@ -117,6 +116,7 @@ export default function App() {
         <div className="nga-section-inner">
           <div className="nga-center-head">
             <h3 className="nga-h2">Potensi &amp; Sumber Daya Desa</h3>
+            <div className="nga-underline" />
           </div>
 
           <div className="nga-potensi-grid">
