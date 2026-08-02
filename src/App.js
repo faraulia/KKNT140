@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { FiMapPin, FiCompass, FiArrowUp, FiArrowRight, FiArrowDown, FiArrowLeft } from "react-icons/fi";
+import { FiCompass, FiArrowUp, FiArrowRight, FiArrowDown, FiArrowLeft } from "react-icons/fi";
 import "./App.css";
 
 const BATAS = [
@@ -7,12 +7,6 @@ const BATAS = [
   { arah: "Timur", tempat: "Desa Kliris", ket: "Kec. Boja", icon: "east" },
   { arah: "Selatan", tempat: "Desa Pagerwojo", ket: "Kec. Limbangan", icon: "south" },
   { arah: "Barat", tempat: "Desa Karangmanggis", ket: "Kec. Boja", icon: "west" },
-];
-
-const STAT = [
-  { label: "JARAK KE KECAMATAN", value: "5,5", unit: "KM", accent: "primary" },
-  { label: "JARAK KE KABUPATEN", value: "28", unit: "KM", accent: "secondary" },
-  { label: "WAKTU TEMPUH", value: "1", unit: "JAM", accent: "tertiary" },
 ];
 
 const POTENSI = [
