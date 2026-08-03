@@ -115,7 +115,7 @@ export default function App() {
       <section id="potensi" className="nga-potensi-section">
         <div className="nga-section-inner">
           <div className="nga-center-head">
-            <h3 className="nga-h2">Potensi &amp; Sumber Daya Desa</h3>
+            <h3 className="nga-h2">Potensi & Sumber Daya Desa</h3>
             <div className="nga-underline" />
           </div>
 
