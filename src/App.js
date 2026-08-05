@@ -12,7 +12,7 @@ const BATAS = [
 const POTENSI = [
   { judul: "Peta Potensi EBT Desa Ngabean", img: "/images/MULDIS1.png" },
   { judul: "Peta Tata Guna Lahan Desa Ngabean", img: "/images/PETABARU.png" },
-  { judul: "Potensi Biogas Desa", img: "/images/BIOGAS.jpeg" },
+  { judul: "Potensi Biogas Desa", img: "/images/BIOGAS.png" },
 ];
 
 function useGoogleFonts() {
